@@ -1,0 +1,302 @@
+:root {
+    --primary-color: #0077b6; /* A clean, professional blue */
+    --accent-color: #333333; /* Dark gray for text */
+    --header-bg: #f4f4f4; /* Light gray header background */
+    --main-bg: #ffffff;
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --horizontal-padding: 40px; /* Standardized padding variable */
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0;
+    color: var(--accent-color);
+    background-color: var(--main-bg);
+}
+
+/* ---------------------------------------------------- */
+/* --- HEADER STYLING --- */
+/* ---------------------------------------------------- */
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px var(--horizontal-padding); 
+    background-color: var(--header-bg);
+    border-bottom: 5px solid var(--primary-color);
+}
+.header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    justify-content: center;
+    text-align: right;
+    font-size: 0.9em;
+}
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid var(--primary-color);
+}
+header h1 {
+    font-size: 2.2em;
+    color: var(--accent-color);
+    margin: 0;
+    line-height: 1.1;
+}
+header p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--accent-color);
+}
+
+/* --- CONTACT INFO & ICONS --- */
+.contact-info a {
+    display: flex; 
+    align-items: center;
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+.contact-info .icon {
+    width: 14px; 
+    height: 14px;
+    margin-left: 5px; 
+    margin-right: 5px;
+    order: 2; /* Pushes the icon to the right side of the text */
+}
+.contact-info a {
+    flex-direction: row-reverse; /* Reverses the order of text and icon */
+    justify-content: flex-end;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- MAIN CONTENT & GENERAL STYLING --- */
+/* ---------------------------------------------------- */
+.about-me {
+    background-color: var(--header-bg); 
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0; 
+    font-style: italic;
+    font-size: 1.1em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+}
+.about-me p {
+    padding: 0; 
+    margin: 0;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+section {
+    margin-bottom: 30px;
+    padding-left: var(--horizontal-padding);
+    padding-right: var(--horizontal-padding);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+/* --- EXPERIENCE/PROJECT ENTRY STYLING --- */
+.entry {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-left: 3px solid var(--primary-color);
+}
+.entry h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between; /* Separates the left title group from the right date */
+}
+
+/* Groups the title link and project icons on the left */
+.entry h3 .title-group {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Small gap between the main link and the icon link */
+}
+
+/* Styling for the small icon link (e.g., YouTube icon) */
+.entry h3 .project-link-icon {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+}
+.entry h3 .icon-small {
+    width: 16px; 
+    height: 16px;
+    vertical-align: text-top; 
+}
+
+
+.entry .subtitle {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+}
+.entry ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+.entry li {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+/* Date/time on the far right */
+.right {
+    font-weight: 400;
+    color: #666;
+    font-size: 0.9em;
+    flex-shrink: 0;
+    margin-left: 15px; /* Ensures space between the title group and the date */
+}
+
+/* --- SKILLS GRID/TAGS --- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+.skill-tag {
+    background-color: #e6f7ff;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+
+/* ---------------------------------------------------- */
+/* --- PROJECT SCREENSHOTS (Horizontal Scroll) --- */
+/* ---------------------------------------------------- */
+.project-with-image {
+    margin-bottom: 25px; 
+}
+.project-screenshots {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px dashed #cccccc;
+    background-color: #fafafa;
+    border-radius: 5px;
+}
+.project-screenshots h4 {
+    margin: 0 0 10px 0;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* --- SCROLL CONTAINER --- */
+.screenshots-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 15px;       /* Space between images */
+    padding-bottom: 10px; 
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox scrollbar hiding */
+}
+/* Hide scrollbar in Webkit browsers (Chrome, Safari) */
+.screenshots-container::-webkit-scrollbar {
+    display: none;
+}
+
+.project-screenshot {
+    height: 200px; /* Fixed height for consistent look in scroll view */
+    width: auto;   /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevents images from shrinking */
+    
+    max-width: none; 
+    display: block;
+    margin: 0;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* ---------------------------------------------------- */
+/* --- EDUCATION & AWARDS STYLING --- */
+/* ---------------------------------------------------- */
+
+/* General list reset */
+.awards-section ul {
+    list-style-type: none; 
+    padding-left: 0; 
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+/* List item flex layout for content and date */
+.awards-section li {
+    display: flex !important; 
+    justify-content: space-between; 
+    align-items: flex-start;
+    position: relative; 
+    font-size: 0.9em;
+    margin-bottom: 3px;
+    padding-left: 15px; /* Space for the pseudo-bullet */
+    padding-right: 0;
+}
+
+/* Custom bullet point */
+.awards-section li::before {
+    content: "\2022\a0"; 
+    position: absolute;
+    left: 0; 
+    top: 0;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Date alignment */
+.entry li .right {
+    font-weight: 400;
+    color: #666;
+    font-size: 0.9em;
+    flex-shrink: 0;
+    margin-left: 10px; 
+    text-align: right;
+}
