@@ -1,6 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
+    <script>
+      // Prevent flash by setting theme before page renders
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jessi Huang | CS Student & Software Engineer</title>
@@ -23,8 +32,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-C64KiBJE.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-eiS78YgX.css">
+    <script type="module" crossorigin src="/assets/index-BjwTwq-K.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CRCP7w1J.css">
   </head>
   <body>
     <div id="root"></div>
